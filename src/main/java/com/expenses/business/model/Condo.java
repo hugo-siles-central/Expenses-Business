@@ -1,5 +1,17 @@
 package com.expenses.business.model;
 
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@JsonRootName("condo")
+@JsonTypeName("condo")
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.WRAPPER_OBJECT
+)
 public class Condo {
 
     private Long id;
